@@ -9,10 +9,7 @@
   .regular-client-logo {
     display: flex;
   }
-  .regular-client-img:not(:last-child) {
-    margin-right: 30px;
-    min-width: 170px;
-  }
+ 
   .link-reg-cli:focus > .svg-logo1,
   .link-reg-cli:hover > .svg-logo1,
   .link-reg-cli:focus > .svg-logo2,
@@ -44,6 +41,10 @@
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:not(:last-child) {
+      margin-right: 30px;
+      min-width: 170px;
+    }
   }
   
   .svg-logo1 {

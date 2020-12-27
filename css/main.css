@@ -41,12 +41,6 @@ img {
   height: auto;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .conteiner {
   width: 1200px;
   padding: 0 15px;
@@ -149,10 +143,6 @@ a {
   color: #000000;
 }
 
-.navigation-item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .navigation-item {
   font-family: var(--main-lang);
   font-weight: 500;
@@ -175,6 +165,10 @@ a {
   content: "";
   background: var(--accent-color);
   border-radius: 2px;
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .modal-btn-header {
@@ -284,13 +278,7 @@ a {
   cursor: pointer;
 }
 
-.benefits-list-item:not(:last-child) {
-  margin-right: 30px;
-  min-width: 270px;
-}
-
 /*---section-hero end---*/
-/*---section-benefits---*/
 .benefits-list-item::before {
   width: 270px;
   height: 120px;
@@ -303,19 +291,24 @@ a {
 }
 
 .benefits-list-item.icon-antena::before {
-  background-image: url(./imagine/antenna1.svg);
+  background-image: url(/imagine/antenna1.svg);
 }
 
 .benefits-list-item.icon-clock::before {
-  background-image: url(./imagine/clock1.svg);
+  background-image: url(/imagine/clock1.svg);
 }
 
 .benefits-list-item.icon-diagram::before {
-  background-image: url(./imagine/diagram1.svg);
+  background-image: url(/imagine/diagram1.svg);
 }
 
 .benefits-list-item.icon-astronaut::before {
-  background-image: url(./imagine/astronaut1.svg);
+  background-image: url(/imagine/astronaut1.svg);
+}
+
+.benefits-list-item:not(:last-child) {
+  margin-right: 30px;
+  min-width: 270px;
 }
 
 .what-we-doing-section {
@@ -362,7 +355,6 @@ a {
   color: var(--main-text-color);
 }
 
-/*---section-benefits- end--*/
 /*what we doing*/
 .what-we-doing-img {
   position: relative;
@@ -479,6 +471,10 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.link:hover, .link:focus {
+  background-color: var(--accent-color);
+}
+
 .soc-link:not(:last-child) {
   margin-right: 10px;
 }
@@ -492,20 +488,6 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link:hover > .our-team-socil-item,
-.link:focus > .our-team-socil-item {
-  fill: white;
-}
-
-.link:hover,
-.link:focus {
-  background-color: var(--accent-color);
-}
-
-.footer-soc-link:not(:last-child) {
-  margin-right: 10px;
-}
-
 .our-team-socil-links {
   display: flex;
   padding: 0;
@@ -513,6 +495,10 @@ a {
   margin-top: 16px;
   margin-bottom: 30px;
   margin-left: 32px;
+}
+
+.our-team-socil-links .link:hover, .link:focus .our-team-socil-links {
+  fill: white;
 }
 
 /*team-end--*/
@@ -527,11 +513,6 @@ a {
 
 .regular-client-logo {
   display: flex;
-}
-
-.regular-client-img:not(:last-child) {
-  margin-right: 30px;
-  min-width: 170px;
 }
 
 .link-reg-cli:focus > .svg-logo1,
@@ -565,6 +546,11 @@ a {
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.regular-client-img:not(:last-child) {
+  margin-right: 30px;
+  min-width: 170px;
 }
 
 .svg-logo1 {
@@ -780,6 +766,10 @@ a {
   fill: #FFFFFF;
 }
 
+.footer-soc-link:not(:last-child) {
+  margin-right: 10px;
+}
+
 /*footer end*/
 /* Portfolio */
 .header-portfolio .navigation-item .current::after {
@@ -974,10 +964,6 @@ a:visited.adress-mail-footer,
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modalka {
-  transform: translate(-50%, -50%) scale(0.5);
-}
-
 .modalka {
   display: block;
   position: absolute;
@@ -990,6 +976,10 @@ a:visited.adress-mail-footer,
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modalka {
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modalka-btn {
@@ -1064,16 +1054,6 @@ a:visited.adress-mail-footer,
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field-textarea textarea {
-  margin: 0;
-  padding: 0;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .form-field-textarea {
   display: flex;
   flex-direction: column;
@@ -1081,10 +1061,21 @@ a:visited.adress-mail-footer,
 }
 
 .form-field-textarea textarea {
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   padding-left: 16px;
   padding-top: 12px;
   resize: none;
+}
+
+.form-field-textarea textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
 .form-field-textarea textarea::placeholder {
@@ -1142,11 +1133,6 @@ span {
 }
 
 .form-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-.form-field-textarea textarea:focus {
   outline: none;
   border-color: var(--accent-color);
 }

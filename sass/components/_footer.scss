@@ -108,7 +108,6 @@
   border-radius: 4px;
   background: #2F303A;
   
-  
     &::placeholder{
    font-family: "Roboto", sans-serif;
    font-weight: 400;
@@ -150,6 +149,9 @@
   }
   .litak{
     fill: #FFFFFF;
+  }
+  .footer-soc-link:not(:last-child) {
+    margin-right: 10px;
   }
   
   /*footer end*/

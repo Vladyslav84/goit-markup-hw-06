@@ -27,10 +27,11 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
-  .our-team-img:not(:last-child) {
-    margin-right: 30px;
-  }
+
   .our-team-h3 {
     text-align: center;
     margin-top: 30px;
@@ -65,6 +66,10 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     &:hover,
+     &:focus {
+    background-color: var(--accent-color);
+  }
   }
   .soc-link:not(:last-child) {
     margin-right: 10px;
@@ -77,25 +82,17 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .link:hover > .our-team-socil-item,
-  .link:focus > .our-team-socil-item {
-    fill: white;
-  }
-  .link:hover,
-  .link:focus {
-    background-color: var(--accent-color);
-  }
-  
-  .footer-soc-link:not(:last-child) {
-    margin-right: 10px;
-  }
+    
   .our-team-socil-links {
     display: flex;
     padding: 0;
     list-style: none;
     margin-top: 16px;
     margin-bottom: 30px;
-      margin-left: 32px;
+    margin-left: 32px;
+    .link:hover, .link:focus & {
+      fill: white;
+    }
    }
   
   /*team-end--*/
